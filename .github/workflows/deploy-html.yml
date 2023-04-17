@@ -1,0 +1,27 @@
+name: SSH based deployment of HTML Code to an EC2 Instance
+on: 
+    push:
+        branches:
+            - main
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code from the repository 
+              uses: actions/checkout@v3
+
+            - name: Build the html code
+              run: echo "Nothing to build. This is static HTML"
+
+    deploy:
+        needs: [build]
+        runs-on: ubuntu-latest 
+        steps:
+            - name: SSH Based deployment 
+            
+           
+
+
+
+            
